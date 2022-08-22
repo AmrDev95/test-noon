@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GetDataService } from '../get-data.service';
+
 
 @Component({
   selector: 'app-carousel',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _GetDataService:GetDataService
+  ) { }
 
   ngOnInit(): void {
+    this._GetDataService.getHomePage().subscribe(
+      (data)=>{
+        console.log(data);
+      }
+    );
   }
 
 }

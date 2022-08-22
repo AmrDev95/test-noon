@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { GridComponent } from './grid/grid.component';
 import { RowComponent } from './row/row.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RowComponent } from './row/row.component';
   ],
   imports: [
     BrowserModule,
-    SwiperModule
+    SwiperModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
