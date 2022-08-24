@@ -1,0 +1,15 @@
+<div *ngIf="displayData" class="container mt-5">
+    <h3>{{displayData.title}}</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+            <div class="col mx-auto" *ngFor="let item of displayData.data; index as i">
+              <div class="card">
+                <img [src]="baseImgUrl + item.cover" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.name}}</h5>
+                  <p>Number Of Orders: <span class="text-primary">{{item.ordersnumber}}</span></p>
+                  <p>Total: <span class="text-success">{{item.total}}</span></p>
+                </div>
+              </div>
+            </div>
+        </div>
+</div>

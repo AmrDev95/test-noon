@@ -1,0 +1,45 @@
+.w-logo{
+    width: 100px;
+}
+
+.navbar-wrapper{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+    margin-bottom: 30px;
+}
+
+.w-egypt{
+    width: 40px;
+}
+
+.bottom-nav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 999999999999999999999999999999999999999999999999;
+    background-color: rgb(252,251,244);
+}
+
+button:focus, input:focus{
+    box-shadow: none !important;
+}
+
+.collapse-submenu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+}
+
+.main-list{
+    background-color: rgb(252,251,244);
+}
+
+ul li{
+    margin: 20px 0px;
+    cursor: pointer;
+}

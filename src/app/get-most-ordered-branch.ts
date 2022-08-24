@@ -1,0 +1,26 @@
+export interface GetMostOrderedBranch {
+    title?:string;
+    data?:[{
+        RestauranthId:number;
+        branches:{
+            id:number;
+            name:string;
+            restaurant:{
+                RestauranthId:number;
+                cover:string;
+                cuisines:[{
+                    id:number;
+                    name:string;
+                }];
+                logo:string;
+                name:string;
+            };
+        };
+        cover:string;
+        delivery_cost:number;
+        delivery_time:number;
+        name:string;
+        ordersnumber:number;
+        total:number;
+    }]
+}

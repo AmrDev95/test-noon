@@ -1,5 +1,6 @@
 <div class="w-100 py-5 bg-light-yellow px-4">
-    <swiper
+  <!-- to see previous data (at the beginning of the project of static data) please remove the commented sections below and comment the uncommented section -->
+    <!-- <swiper
     [config]="gridConfig"
     class="mySwiper d-md-block d-none"
   >
@@ -71,5 +72,17 @@
         <img src="../../assets/images/29.png" class="w-17 mx-3" alt="">
         <img src="../../assets/images/30.png" class="w-17 mx-3" alt="">
     </div>
-  </div>
+  </div> -->
+
+
+
+  <swiper
+    [config]="dynamicDataConfig"
+    class="mySwiper"
+  >
+    <ng-template class="bg-transparent d-flex flex-column align-items-center" *ngFor="let category of categoriesArr" swiperSlide>
+      <img [src]="baseImgUrl + category.photo" class="w-50" alt="">
+      <h4 class="mt-2">{{category.name_en}}</h4>
+    </ng-template>
+  </swiper>
 </div>

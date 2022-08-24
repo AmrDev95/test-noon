@@ -1,0 +1,15 @@
+<div *ngIf="displayData" class="container mt-5">
+    <h3>{{displayData.title}}</h3>
+    <div class="row mt-2">
+        <div class="col-md-4 my-4" *ngFor="let item of displayData.data; index as i">
+            <div class="position-relative hover">
+               <img [src]="baseImgUrl + item.cover" class="w-100" alt="">
+               <div class="img-effect">
+                    <h6>{{item.name}}</h6>
+                    <!-- id to be sent for a request -->
+                    <button (click)="sendData(item)" class="btn btn-warning">See More</button>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>

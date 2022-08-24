@@ -1,0 +1,75 @@
+<div class="navbar-wrapper">
+    <nav class="navbar position-relative navbar-expand-lg navbar-light bg-theme px-3 py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand"><img src="../../assets/images/noon-logo-ar.svg" class="w-logo" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-md-3 m-0 align-items-center">
+                <img src="../../assets/images/pngegg.png" class="w-egypt h-auto" alt="">
+                <p class="ms-2 my-auto">
+                    <span class="d-block">Deliver to Egypt</span>
+                </p>
+              </div>
+            <input type="text" class="form-control w-50 mx-auto d-lg-block d-none" placeholder="what are you looking for...">
+            <form class="d-flex d-lg-none d-block mt-4">
+                <input class="form-control me-2" type="search" placeholder="what are you looking for..." aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            <div class="d-flex align-items-center ms-auto mt-lg-0 mt-4">
+                <span class="pe-4 border-2 border-dark border-end">العربية</span>
+                <span class="px-4 border-2 border-dark border-end">Signin <i class="fa-solid fa-user"></i></span>
+                <span class="px-4">Cart <i class="fa-solid fa-cart-shopping"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-nav d-lg-block d-none">
+            <div class="position-relative w-100 h-100 py-2">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <button class="btn btn-primary bg-transparent border-0 text-black" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        All Categories <i class="fa-solid fa-angle-down"></i>
+                    </button>
+
+                    <button class="btn btn-primary bg-transparent border-0 text-black">Electronics <i class="fa-solid fa-angle-down"></i></button>
+                    <button class="btn btn-primary bg-transparent border-0 text-black">Mobile <i class="fa-solid fa-angle-down"></i></button>
+                    <button class="btn btn-primary bg-transparent border-0 text-black">Men <i class="fa-solid fa-angle-down"></i></button>
+                    <button class="btn btn-primary bg-transparent border-0 text-black">Women <i class="fa-solid fa-angle-down"></i></button>
+                    <button class="btn btn-primary bg-transparent border-0 text-black">Home <i class="fa-solid fa-angle-down"></i></button>
+
+                    <div class="collapse collapse-submenu" id="collapseExample">
+                        <div class="d-flex">
+                            <div class="main-list p-4">
+                                <ul class="list-unstyled">
+                                    <!-- mad this to the first 2 elements only due to time -->
+                                    <li (mouseover)="changeData(1)">Electronics</li>
+                                    <li (mouseover)="changeData(2)">Mobile</li>
+                                    <li>Men</li>
+                                    <li>Women</li>
+                                    <li>Home</li>
+                                    <li>Beauty</li>
+                                    <li>Baby</li>
+                                    <li>Supermarket</li>
+                                  </ul>
+                            </div>
+                            <div class="p-4">
+                                <ul class="list-unstyled">
+                                    <li class="mb-3 pb-1 fw-bolder border-bottom">Most Popular</li>
+                                    <li *ngFor="let item of displayMP">{{item}}</li>
+                                  </ul>
+                            </div>
+                            <div class="p-4 me-5">
+                                <ul class="list-unstyled">
+                                    <li class="mb-3 pb-1 fw-bolder border-bottom">Top Brands</li>
+                                    <li *ngFor="let item of displayTB">{{item}}</li>
+                                  </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+</div>

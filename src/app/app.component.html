@@ -1,5 +1,13 @@
+<app-navbar></app-navbar>
 <div class="w-adjust">
   <app-carousel></app-carousel>
   <app-grid></app-grid>
   <app-row></app-row>
+  <app-free-delivery-branches [Data]="homePageData.GetFreeDliveryBranches"></app-free-delivery-branches>
+  <app-get-nearest-branche [Data]="homePageData.GetNearestBranche"></app-get-nearest-branche>
+  <app-get-percentage-for-vendors [Data]="homePageData.GetPercentageForVendors"></app-get-percentage-for-vendors>
+  <app-most-sell-items [Data]="homePageData.MostSellItems"></app-most-sell-items>
+  <app-get-most-ordered-branch [Data]="homePageData.getMostOrderedBranch"></app-get-most-ordered-branch>
+  <app-lastoffers [Data]="homePageData.lastoffers"></app-lastoffers>
+  <app-see-more></app-see-more>
 </div>

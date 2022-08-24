@@ -1,0 +1,24 @@
+<section *ngIf="seeMoreFlag" class="see-more-section">
+    <div class="content position-relative p-4">
+        <i (click)="disableSeeMore()" class="fa-solid fa-circle-xmark fs-2 "></i>
+        <div class="card mt-5">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img [src]="baseImgUrl + displayData.cover" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{displayData.name}}</h5>
+                  <p *ngIf="!displayData.description" class="card-text">No Description available yet</p>
+                  <p *ngIf="displayData.description" class="card-text">{{displayData.description}</p>
+                  <p class="card-text">Delivery cost: <span class="text-success">{{displayData.delivery_cost | currency:'EGP'}}</span></p>
+                  <p class="card-text">Delivery Time: <span class="text-success">{{displayData.delivery_time}} Min</span></p>
+                  <p class="card-text"><i class="fa-solid fa-kitchen-set"></i>: <span *ngFor="let cuisine of displayData.cuisines" class="d-inline">{{cuisine.name}}, </span> </p>
+                  <p *ngIf="displayData.IsOpen == 'false'" class="card-text fs-6 text-danger">Closed Now</p>
+                  <p *ngIf="displayData.IsOpen == 'true'" class="card-text fs-6 text-success">Open</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</section>

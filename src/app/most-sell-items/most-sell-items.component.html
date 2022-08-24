@@ -1,0 +1,18 @@
+<div *ngIf="displayData" class="container mt-5">
+    <h3>{{displayData.title}}</h3>
+        <div class="row  row-cols-1 row-cols-md-3 g-4 mt-2">
+            <div class="col mx-auto" *ngFor="let item of displayData.data; index as i">
+              <div class="card">
+                <img [src]="baseImgUrl + item.menu_categories_items.photo" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.menu_categories_items.name_en}}</h5>
+                  <p class="card-text">{{item.menu_categories_items.descriptions_en}}</p>
+                  <p>Amount: <span class="text-primary">{{item.itemamount}} X</span></p>
+                  <p>Total Amount: <span class="text-success">{{item.itemtotal}}X</span></p>
+                  <p class="mt-5">Price: <span class="text-success">{{item.menu_categories_items.price | currency:"EGP"}}</span></p>
+                  <button class="btn btn-warning mt-2">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+</div>
